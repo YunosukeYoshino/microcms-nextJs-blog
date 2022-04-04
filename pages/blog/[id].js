@@ -3,12 +3,17 @@ import { client } from "../../libs/client";
 export default function BlogId({ blog }) {
   return (
     <main>
+
+
       <h1 className="font-bold">{blog.title}</h1>
       <p>{blog.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
           __html: `${blog.body}`,
         }}
+      />
+      <img
+        src={blog.image.url}
       />
     </main>
   );
